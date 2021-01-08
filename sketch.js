@@ -13,7 +13,7 @@ var score=0;
 var bg = "images/light.jpg";
 function preload(){
   getBackgroundImage();
-  polygon_img=loadImage("images/polygon.png");
+  polygon_img=loadImage("polygon.png");
   
 }
 function setup() {
@@ -65,7 +65,7 @@ function setup() {
   polygon = Bodies.circle(50,200,20);
   World.add(world,polygon);
   
-  slingShot = new Slingshot(this.polygon,{x:100,y:200});
+  slingShot = new SlingShot(this.polygon,{x:100,y:200});
 
 }
 function draw() {
@@ -169,9 +169,9 @@ async function getBackgroundImage(){
    //console.log(hour);
 
    if (hour >= 06 && hour <= 18) {
-     bg = "images/light.jpg";
+     bg = "light.jpg";
    } else {
-     bg = "images/dark.jpg";
+     bg = "dark.jpg";
    }
 
    backgroundImg = loadImage(bg);
